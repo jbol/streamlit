@@ -5,4 +5,4 @@ matplotlib
 streamlit
 ydata_profiling
 streamlit-pandas-profiling
-sklearn
+scikit-learn
