@@ -1,8 +1,9 @@
-numpy
-pandas
-scipy
-matplotlib
 streamlit
-ydata_profiling
-streamlit-pandas-profiling
+pandas
+numpy
+tensorflow
+keras-tuner
+xgboost
+joblib
 scikit-learn
+scipy
