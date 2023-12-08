@@ -23,7 +23,7 @@ def main():
 
     
     # Select model
-    model_name = st.sidebar.selectbox('Select Model', ['Logreg', 'SVM', 'DTree', 'RF', 'GBM', 'AdaBoost', 'kNN'])
+    model_name = st.sidebar.selectbox('Select Model', ['SVM','kNN'])
     
     # Load the trained model and its accuracy based on user's selections
     model, model_accuracy = load_model(dataset_name, model_name)
