@@ -53,6 +53,7 @@ def main():
         sulphates = st.slider('Sulphates', 0.22, 2.0, 0.5)
         alcohol = st.slider('Alcohol', 8.0, 14.9, 10.0)
         wine_type = st.selectbox('Type', ['red', 'white'])
+        model_name = 'JohnBolorinos_WineFraud_SVM_model.plk'
     
         # Convert wine_type to a format suitable for the model (e.g., one-hot encoding)
         if wine_type == 'red':
@@ -63,7 +64,7 @@ def main():
         features = np.array([fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol, type_white]).reshape(1, -1)
     
         # Load the saved scaler and scale the input features
-        with open('JohnBolorinos_WineFraud_SVM_model.plk', 'rb') as file:
+        with open('wine_scaler.plk', 'rb') as file:
             scaler = pickle.load(file)
             features = scaler.transform(features)
 
