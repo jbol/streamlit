@@ -63,7 +63,7 @@ def main():
         features = np.array([fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol, type_white]).reshape(1, -1)
     
         # Load the saved scaler and scale the input features
-        with open('wine_scaler.pkl', 'rb') as file:
+        with open('JohnBolorinos_WineFraud_SVM_model.plk', 'rb') as file:
             scaler = pickle.load(file)
             features = scaler.transform(features)
 
