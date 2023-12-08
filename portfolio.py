@@ -18,7 +18,7 @@ def main():
     st.title('Machine Learning Classifier Web App')
     
     # Select dataset
-    dataset_name = st.sidebar.selectbox('Select Dataset', ['wine', 'iris', 'bank_retirement', 'diabetes'])
+    dataset_name = st.sidebar.selectbox('Select Dataset', ['wine', 'iris'])
     display_dataset_image(dataset_name)
 
     
