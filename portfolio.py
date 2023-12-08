@@ -53,7 +53,7 @@ def main():
         sulphates = st.slider('Sulphates', 0.22, 2.0, 0.5)
         alcohol = st.slider('Alcohol', 8.0, 14.9, 10.0)
         wine_type = st.selectbox('Type', ['red', 'white'])
-        model_name = 'JohnBolorinos_WineFraud_SVM_model.plk'
+
     
         # Convert wine_type to a format suitable for the model (e.g., one-hot encoding)
         if wine_type == 'red':
