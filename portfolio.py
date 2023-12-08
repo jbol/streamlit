@@ -68,31 +68,6 @@ def main():
             scaler = pickle.load(file)
             features = scaler.transform(features)
 
-
-    if dataset_name == 'bank_retirement':
-        age = st.slider('Age', 20, 100, 50)  # Adjust the range as needed
-        savings_401k = st.slider('401K Savings ($)', 0, 1000000, 200000)  # Adjust the range and default value as needed
-        features = np.array([age, savings_401k]).reshape(1, -1)
-
-    # Adding input features for diabetes dataset
-    if dataset_name == 'diabetes':
-        pregnancies = st.slider('Pregnancies', 0, 17, 3)
-        glucose = st.slider('Glucose', 0, 199, 117)
-        blood_pressure = st.slider('Blood Pressure', 0, 122, 72)
-        skin_thickness = st.slider('Skin Thickness', 0, 99, 23)
-        insulin = st.slider('Insulin', 0, 846, 30)
-        bmi = st.slider('BMI', 0.0, 67.1, 32.0)
-        diabetes_pedigree = st.slider('Diabetes Pedigree Function', 0.078, 2.42, 0.3725)
-        age = st.slider('Age', 21, 81, 29)
-    
-        features = np.array([pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, diabetes_pedigree, age]).reshape(1, -1)
-    
-        # Load the saved scaler and scale the input features for diabetes (if you have a scaler for it)
-        with open('diabetes_scaler.pkl', 'rb') as file:
-            scaler = pickle.load(file)
-            features = scaler.transform(features)
-
-
     # Predict button
     if st.button('Predict'):
         prediction = model.predict(features)
