@@ -104,14 +104,6 @@ def main():
             wine_classes = ['Fraud', 'Legit']
             wine_name = wine_classes[prediction[0]]
             st.write(f'### Prediction: {wine_name}')
-        if dataset_name == 'bank_retirement':
-            bank_retirement_classes = ['Not able to retire', 'Can retire']
-            bank_retirement_name = bank_retirement_classes[prediction[0]]
-            st.write(f'### Prediction: {bank_retirement_name}')
-        if dataset_name == 'diabetes':
-            diabetes_classes = ['Negative', 'Positive']
-            diabetes_status = diabetes_classes[prediction[0]]
-            st.write(f'### Prediction: Diabetes Status - {diabetes_status}')
 
     
         # Display the model's accuracy (assuming you've loaded or calculated the accuracy)
