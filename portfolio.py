@@ -15,7 +15,7 @@ def display_dataset_image(dataset_name):
 
 # Main function to run the app
 def main():
-    st.title('Machine Learning Classifier Web App')
+    st.title('ML for Wine Fraud and Iris Classifier')
     
     # Select dataset
     dataset_name = st.sidebar.selectbox('Select Dataset', ['wine', 'iris'])
